@@ -1,0 +1,14 @@
+$body-color: #000000;
+$btn-default-color: black;
+$btn-bg-default-color: #c0a1a1;
+$btn-border-default-color: grey;
+$btn-bg-color: #c5bec4;
+$btn-text-color: #440e38;
+
+@function set-text-color($bg-color) {
+  @if (lightness($bg-color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

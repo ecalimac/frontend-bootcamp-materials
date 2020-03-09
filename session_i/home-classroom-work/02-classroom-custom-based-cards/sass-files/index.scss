@@ -4,3 +4,12 @@
     (displaying a colorful, bottom red bordered, black texted card).
     Reuse the box model mixin previously created.
 */
+
+// Import fonts
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+// Import variables
+@import "_variables";
+// Import mixins
+@import "mixins/_factories";
+// Import styles
+@import "_styles";

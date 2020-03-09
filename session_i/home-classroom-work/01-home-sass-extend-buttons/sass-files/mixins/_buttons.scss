@@ -1,0 +1,36 @@
+@mixin button-size(
+  $btn-padding-y,
+  $btn-padding-x,
+  $btn-font-size,
+  $btn-line-height
+) {
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+}
+
+@mixin button-colors($btn-bg-color, $btn-text-color) {
+  background-color: $btn-bg-color;
+  color: $btn-text-color;
+}
+
+@mixin btn($btn-bg-color, $btn-text-color, $radius) {
+  display: inline-block;
+  font-family: "Fredoka One", cursive;
+  font-weight: $btn-font-weight;
+  color: $btn-default-color;
+  background-color: $btn-bg-default-color;
+  border: $btn-border-width solid $btn-border-default-color;
+  text-align: $btn-text-align;
+  vertical-align: middle;
+  @include transition-ease;
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height
+  );
+  @include button-colors($btn-bg-color, $btn-text-color);
+  @include rounded($radius);
+  @include hover-colors($btn-bg-color, $btn-text-color);
+}

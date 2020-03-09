@@ -2,10 +2,11 @@
     01. Take the properties from the first exercise and create a box model mixin.
     Reuse the mixin to create a box with a text paragraph
 */
-
-@import "mixins/_factories";
-@import "_variables";
-
 .box-model {
-  @include box-model($margin, none, $padding, unset, unset);
+  margin: 20px;
+  border: none;
+  padding: 20px;
+  width: unset;
+  height: unset;
 }
+/*# sourceMappingURL=index.css.map */

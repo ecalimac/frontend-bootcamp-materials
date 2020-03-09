@@ -1,0 +1,59 @@
+.cards {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  .card {
+    @include box-model($margin, $border, $padding, $width, $height);
+    @if ($card-layout == "enabled") {
+      background: #a1ffce; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #faffd1,
+        #a1ffce
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #faffd1,
+        #a1ffce
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border: none;
+      border-bottom: $border;
+    }
+    @if ($card-layout == "disabled") {
+      background-color: grey;
+      color: darkgray;
+      border: 0;
+    }
+    justify-self: center;
+  }
+
+  // Ask about this posibility
+
+  // .card-#{$card-mode} {
+  //   @include box-model($margin, $border, $padding, $width, $height);
+  //   @if ($card-mode == "enabled") {
+  //     background: #a1ffce; /* fallback for old browsers */
+  //     background: -webkit-linear-gradient(
+  //       to right,
+  //       #faffd1,
+  //       #a1ffce
+  //     ); /* Chrome 10-25, Safari 5.1-6 */
+  //     background: linear-gradient(
+  //       to right,
+  //       #faffd1,
+  //       #a1ffce
+  //     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //     border: none;
+  //     border-bottom: $border;
+  //   }
+  //   @if ($card-mode == "disabled") {
+  //     background-color: grey;
+  //     color: darkgray;
+  //     border: 0;
+  //   }
+  //   justify-self: center;
+  // }
+}

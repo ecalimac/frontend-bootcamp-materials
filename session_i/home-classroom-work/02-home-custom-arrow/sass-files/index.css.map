@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;EAIE;AAMF,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;CAIhB;;AAND,AAGE,KAHG,CAGH,CAAC,CAAC;EGZF,SAAS,EAAE,cAAY;CHctB",
+    "sources": [
+        "index.scss",
+        "_variables.scss",
+        "mixins/_decorators.scss",
+        "mixins/_effects.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

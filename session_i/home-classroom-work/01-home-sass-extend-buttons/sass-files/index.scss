@@ -4,3 +4,20 @@
         Extend the mixin using @extend and create themes for the button.
         Create themes using @if, define a $context variable and change the theme based on the context.
 */
+
+// Import fonts
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+// Import variables
+@import "_variables";
+@import "_colors";
+// Import mixins
+@import "mixins/_shapes";
+@import "mixins/_factories";
+@import "mixins/_decorators";
+@import "mixins/_effects";
+@import "mixins/_buttons";
+// Import styles
+@import "_styles";
+
+// Notes:
+// Instead of the previously created box model mixin created and used another mixin - named button-size, more specific to buttons

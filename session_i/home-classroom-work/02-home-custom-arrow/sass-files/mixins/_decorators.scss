@@ -1,0 +1,3 @@
+@mixin arrow($position) {
+  @include rotate(map-get($direction, $position));
+}

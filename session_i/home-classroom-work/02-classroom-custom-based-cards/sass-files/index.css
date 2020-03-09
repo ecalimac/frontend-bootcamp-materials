@@ -1,0 +1,38 @@
+/**
+    02. Create a small card layout based on a $context variable using @if.
+    Based on the $context you should change the layout type from disabled (displaying a grayed out layout) to enabled 
+    (displaying a colorful, bottom red bordered, black texted card).
+    Reuse the box model mixin previously created.
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+.cards {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.cards .card {
+  margin: 20px;
+  border: 2px solid red;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  background: #a1ffce;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#faffd1), to(#a1ffce));
+  background: linear-gradient(to right, #faffd1, #a1ffce);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  border-bottom: 2px solid red;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=index.css.map */

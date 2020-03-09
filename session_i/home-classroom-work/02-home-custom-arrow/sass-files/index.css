@@ -3,15 +3,13 @@
     The $context should receive one of the following values: top/right/bottom/left.
     Create a rotation mixin to rotate the arrow and use it based on context.
 */
-
-@import "variables";
-@import "mixins/decorators";
-@import "mixins/effects";
-
 .hopa {
   color: blue;
   font-size: 32px;
-  i {
-    @include arrow("top");
-  }
 }
+
+.hopa i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,105 @@
+/**
+    01. Create a button mixin that includes the box model mixin previously created, a color mixin that contains background color and text color,
+        a rounded corner mixin to add rounded corners and some default properties.
+        Extend the mixin using @extend and create themes for the button.
+        Create themes using @if, define a $context variable and change the theme based on the context.
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+.box-model {
+  margin: 20px;
+  border: 2px solid red;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-model button {
+  margin: 15px;
+}
+
+.btn, .btn-theme {
+  display: inline-block;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+  color: black;
+  background-color: #c0a1a1;
+  border: 1px solid grey;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #c5bec4;
+  color: #440e38;
+  border-radius: 10px;
+}
+
+.btn:hover, .btn-theme:hover {
+  background-color: #7c6e7a;
+  color: #440e38;
+}
+
+.btn-blueberry_pinacolada {
+  display: inline-block;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+  color: black;
+  background-color: #c0a1a1;
+  border: 1px solid grey;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: blue;
+  color: lightpink;
+  border-radius: 30px;
+}
+
+.btn-blueberry_pinacolada:hover {
+  background-color: #000066;
+  color: lightpink;
+}
+
+.btn-auto_text_color {
+  display: inline-block;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+  color: black;
+  background-color: #c0a1a1;
+  border: 1px solid grey;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: navy;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn-auto_text_color:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.btn-theme {
+  background: #fffc00;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#fffc00));
+  background: linear-gradient(to right, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,53 @@
+.box-model {
+  @include box-model($margin, $border, $padding, $width, $height);
+  display: flex;
+  flex-wrap: wrap;
+  button {
+    margin: 15px;
+  }
+}
+
+.btn {
+  @include btn($btn-bg-color, $btn-text-color, $radius);
+}
+.btn-blueberry_pinacolada {
+  @include btn(blue, lightpink, 30px);
+}
+.btn-auto_text_color {
+  @include btn(navy, set-text-color(navy), 10px);
+}
+// Extend the mixin using @extend and create themes for the button.
+// Create themes using @if, define a $context variable and change the theme based on the context.
+
+.btn-theme {
+  @extend .btn;
+  @if ($btn-theme == "shadowed") {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  @if ($btn-theme == "forest") {
+    background: #5a3f37; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #5a3f37,
+      #2c7744
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #5a3f37,
+      #2c7744
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  @if ($btn-theme == "sun") {
+    background: #fffc00; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ffffff,
+      #fffc00
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffffff,
+      #fffc00
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
